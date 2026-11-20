@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>홍길동 Portfolio</title>
+<title>박채원 Portfolio</title>
 <!-- 글꼴: Pretendard (GitHub Pages에선 이 링크로 적용됨) + 대체 글꼴 Noto Sans KR -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -166,7 +166,7 @@ main{margin-left:var(--side-w)}
 /* 화면 여러 장을 겹쳐두고 .active만 보이게 */
 .shot{position:absolute; inset:0; opacity:0; visibility:hidden; transition:opacity .35s}
 .shot.active{opacity:1; visibility:visible}
-.shot img, .shot video{width:100%; height:100%; object-fit:contain; background:var(--white)}
+.shot img, .shot video, .shot iframe{width:100%; height:100%; object-fit:contain; background:var(--white); border:0}
 .shot img{cursor:zoom-in}
 /* 아래 탭: 가운데 정렬 알약 버튼 */
 .tabs{display:flex; justify-content:center; flex-wrap:wrap; gap:8px; margin-top:20px}
@@ -243,24 +243,20 @@ main{margin-left:var(--side-w)}
 <body>
 <!-- ===================== 사이드바 ===================== -->
 <aside class="sidebar">
-  <a class="logo" href="#about">GILDONG.<span>PORTFOLIO</span></a>
+  <a class="logo" href="#about">CHAEWON.<span>PORTFOLIO</span></a>
   <div class="side-label">PROJECTS</div>
   <nav class="side-nav">
-    <a href="#p1">Flask Todo 서비스</a>
-    <a href="#p2">상담 말투 LoRA 튜닝</a>
-    <a href="#p3">급식 잔반량 예측</a>
-    <a href="#more">기타 프로젝트</a>
+    <a href="#p1">ConnecJob</a>
+    <a href="#p2">Project911</a>
   </nav>
   <div class="side-label">MORE</div>
   <nav class="side-nav"><a href="#about">About Me</a></nav>
   <div class="side-foot">
-    <div>gildong@naver.com</div>
+    <div>pcw0127@naver.com</div>
     <!-- </a> 닫는 태그 필수! 빠지면 링크가 본문 전체로 번져서 레이아웃이 깨짐 -->
-    <div><a href="https://github.com/4aix" target="_blank" rel="noopener">github.com/4aix</a></div>
+    <div><a href="https://github.com/congcongee" target="_blank" rel="noopener">github.com/congcongee</a></div>
   </div>
 </aside>
-
-<div class="notice">템플릿 예시 페이지예요. Flask Todo 외의 이름·수치·프로젝트는 가상 데이터라서 본인 내용으로 바꿔 쓰면 돼요.</div>
 
 <main>
 
@@ -269,12 +265,12 @@ main{margin-left:var(--side-w)}
   <div class="section-inner">
     <div class="label">ABOUT ME</div>
     <div class="about-top">
-      <img class="photo" src="assets/profile.png" alt="홍길동 증명사진">
+      <img class="photo" src="assets/profile.jpg" alt="박채원 증명사진">
       <div>
-        <div class="kname">홍길동</div>
-        <div class="ename">Hong Gil Dong</div>
-        <div class="role">LLM · RAG · Data Preprocessing · DL/ML</div>
-        <p class="intro">각자 2줄정도로 본인의 강점을 어필합니다<br><b>진짜 강점을 어필합니다.</b></p>
+        <div class="kname">박채원</div>
+        <div class="ename">Pak Chewon</div>
+        <div class="role">LLM · RAG · Data Preprocessing · Django</div>
+        <p class="intro">데이터 수집·전처리부터 RAG 추천, 웹 서비스 구현, AWS 배포까지 혼자 끝까지 만들어 봤습니다.<br><b>6만 건 공고를 통합한 ConnecJob에서 추천 적합률을 72%에서 94%로 높였습니다.</b></p>
       </div>
     </div>
 
@@ -283,288 +279,150 @@ main{margin-left:var(--side-w)}
       <div>
         <h4>CONTACT</h4>
         <dl class="kv">
-          <dt>EMAIL</dt><dd>gildong@naver.com</dd>
-          <dt>GITHUB</dt><dd><a href="https://github.com/4aix" target="_blank">github.com/4aix</a></dd>
-          <dt>위치</dt><dd>서울시 관악구</dd>
+          <dt>EMAIL</dt><dd>pcw0127@naver.com</dd>
+          <dt>GITHUB</dt><dd><a href="https://github.com/congcongee" target="_blank" rel="noopener">github.com/congcongee</a></dd>
         </dl>
       </div>
       <div>
         <h4>EDUCATION</h4>
         <dl class="kv">
-          <dt>학교</dt><dd>○○대학 졸업 (2024.02)<small>컴퓨터정보과</small></dd>
-          <dt>수료</dt><dd>기업맞춤형 AI-X 융복합 인재양성 과정(KDT)<small>MBC아카데미 · 2026.06–2026.11</small></dd>
+          <dt>수료</dt><dd>KDT 기업맞춤형 AI+X 융복합 인재 양성 과정<small>MBC아카데미 · 2026.06–2026.11 (824시간)</small></dd>
+          <dt>학교</dt><dd>을지대학교 졸업 (2025.08)<small>미용화장품과학과</small></dd>
         </dl>
       </div>
       <div>
         <h4>EXPERIENCE</h4>
         <dl class="kv">
-          <dt>사무보조</dt><dd>○○물류 경영지원팀<small>2024.03–2025.12 · 엑셀 보고서 자동화</small></dd>
+          <dt>인턴</dt><dd>YADAH(야다) 마케팅<small>2024.07 · 인플루언서 캠페인 현황 관리, 콘텐츠 반응 데이터 정리</small></dd>
+          <dt>메이트</dt><dd>올리브영 N성수점<small>2024.11–현재 · 오픈 멤버, 고객 문의 파악·공유</small></dd>
         </dl>
       </div>
     </div>
 
-    <!-- 기술 스택: KDT 과정 교과목 순서대로 6칸 구성
-         class="chip p" = 주력 기술(파란색) → 1차(ML·DL + Flask) / 2차(ML·DL + RAG + Django) 프로젝트에서 실제로 쓰는 기술
-         class="chip"   = 수업에서 다뤄 본 기술(회색) -->
+    <!-- 기술 스택: class="chip p" = 프로젝트에서 직접 쓴 주력 기술(파란색), class="chip" = 다뤄 본 기술(회색) -->
     <div class="sub-title">SKILLS &amp; TOOLS</div>
     <div class="skills">
-      <!-- Python 6주: 문법·OOP, Numpy·Pandas, 시각화, 크롤링, Open API -->
-      <div class="skill"><h5>PYTHON · DATA</h5><div class="chips"><span class="chip p">Python</span><span class="chip p">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib · Seaborn</span><span class="chip">Folium</span><span class="chip">웹 크롤링</span><span class="chip">공공·네이버 Open API</span></div></div>
-      <!-- 머신러닝 1주: EDA·전처리, 분류·군집, 차원축소, 파라미터 탐색, 불균형 처리, 앙상블 -->
-      <div class="skill"><h5>MACHINE LEARNING</h5><div class="chips"><span class="chip p">scikit-learn</span><span class="chip p">EDA · 전처리</span><span class="chip">분류 · 회귀 · 군집</span><span class="chip">변수선택 · 차원축소</span><span class="chip">하이퍼파라미터 탐색</span><span class="chip">불균형 처리</span><span class="chip">앙상블</span></div></div>
-      <!-- 딥러닝 1.5주: TF v1/v2·PyTorch, DNN·CNN·RNN·LSTM, Seq2Seq·Attention·Transformer, callback -->
-      <div class="skill"><h5>DEEP LEARNING</h5><div class="chips"><span class="chip p">TensorFlow · Keras</span><span class="chip p">PyTorch</span><span class="chip">DNN · CNN</span><span class="chip">RNN · LSTM · GRU</span><span class="chip">Seq2Seq · Attention</span><span class="chip">Transformer</span><span class="chip">Callback · 모델 저장</span></div></div>
-      <!-- 자연어처리 1주 + LLM 2주: 형태소 분석, HF·Ollama, OpenAI API, LangChain·RAG, Streamlit, sLLM 파인튜닝 -->
-      <div class="skill"><h5>NLP · LLM · RAG</h5><div class="chips"><span class="chip p">LangChain</span><span class="chip p">RAG</span><span class="chip">Hugging Face</span><span class="chip">Ollama</span><span class="chip">OpenAI API</span><span class="chip">KoNLPy · NLTK</span><span class="chip">Streamlit</span><span class="chip">sLLM 파인튜닝</span></div></div>
-      <!-- 웹표준 2주 + 웹 프레임워크 2주: Flask(1차), Django(2차) -->
-      <div class="skill"><h5>WEB · BACKEND</h5><div class="chips"><span class="chip p">Flask</span><span class="chip p">Django</span><span class="chip">Jinja2</span><span class="chip">Django ORM</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">jQuery · Ajax · fetch</span><span class="chip">Bootstrap 5</span></div></div>
-      <!-- Database 1주 + 프로젝트 협업·배포 -->
-      <div class="skill"><h5>DB · DEPLOY · COLLAB</h5><div class="chips"><span class="chip p">MySQL</span><span class="chip p">GitHub</span><span class="chip">Oracle</span><span class="chip">SQL · ERD 설계</span><span class="chip">Git 브랜치 전략</span><span class="chip">AWS 배포</span></div></div>
+      <div class="skill"><h5>PYTHON · DATA</h5><div class="chips"><span class="chip p">Python</span><span class="chip p">pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib · Seaborn</span><span class="chip p">requests · BeautifulSoup</span><span class="chip">Selenium</span><span class="chip">공공 Open API</span></div></div>
+      <div class="skill"><h5>MACHINE LEARNING</h5><div class="chips"><span class="chip p">scikit-learn</span><span class="chip p">EDA · 전처리</span><span class="chip">회귀 · 분류 · 군집</span><span class="chip">앙상블</span><span class="chip">Prophet</span><span class="chip">TF-IDF</span></div></div>
+      <div class="skill"><h5>DEEP LEARNING</h5><div class="chips"><span class="chip p">TensorFlow · Keras</span><span class="chip">DNN · CNN</span><span class="chip">RNN · LSTM</span><span class="chip">PyTorch</span></div></div>
+      <div class="skill"><h5>NLP · LLM · RAG</h5><div class="chips"><span class="chip p">LangChain</span><span class="chip p">RAG</span><span class="chip p">OpenAI API</span><span class="chip p">Chroma</span><span class="chip">Hugging Face</span><span class="chip">Ollama</span></div></div>
+      <div class="skill"><h5>WEB · BACKEND</h5><div class="chips"><span class="chip p">Django</span><span class="chip p">Flask</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">Bootstrap</span><span class="chip">Chart.js</span></div></div>
+      <div class="skill"><h5>DB · DEPLOY · COLLAB</h5><div class="chips"><span class="chip p">AWS EC2</span><span class="chip p">Git · GitHub</span><span class="chip">SQLite</span><span class="chip">MySQL</span><span class="chip">Oracle</span><span class="chip">Notion</span></div></div>
     </div>
 
-    <!-- 자격 / 수상 -->
-    <div class="sub-title">CERTIFICATES &amp; AWARDS</div>
+    <!-- 자격 / 어학·교육 -->
+    <div class="sub-title">CERTIFICATES &amp; EDUCATION</div>
     <div class="certs">
       <div class="cert-col">
-        <h5>자격·어학</h5>
-        <div class="row"><span class="d">2026.11</span><b>빅데이터분석기사</b><small>한국데이터산업진흥원</small></div>
-        <div class="row"><span class="d">2026.03</span><b>정보처리기사</b><small>한국산업인력공단</small></div>
-        <div class="row"><span class="d">2025.09</span><b>AICE(AI Certificate for Everyone) Associate</b><small>케이티(KT)</small></div>
-        <div class="row"><span class="d">2025.06</span><b>SQLD</b><small>한국데이터산업진흥원</small></div>
+        <h5>자격</h5>
+        <div class="row"><span class="d">2026.06</span><b>ADsP 데이터분석 준전문가</b><small>한국데이터산업진흥원</small></div>
+        <div class="row"><span class="d">2026.01</span><b>Google Analytics 수료 및 평가</b><small>Google</small></div>
       </div>
       <div class="cert-col">
-        <h5>수상·활동</h5>
-        <div class="row"><span class="d">2026.11</span><b>국부펀드 KIC, AI 에이전트 공모전 참여</b><small>한국투자공사</small></div>
-        <div class="row"><span class="d">2026.10</span><b>차량용 앱 개발 공모전(머신러닝, RAG사용)</b><small>현대자동차</small></div>
+        <h5>어학·교육</h5>
+        <div class="row"><span class="d">2025.07</span><b>OPIc IM1</b><small>ACTFL</small></div>
+        <div class="row"><span class="d">2024.05</span><b>마케터·기획자를 위한 실전 데이터 분석</b><small>스파르타클럽</small></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== PROJECT 01 : Flask Todo (첨부 자료) ===================== -->
+<!-- ===================== PROJECT 01 : ConnecJob ===================== -->
 <section class="section" id="p1">
   <div class="section-inner project-layout">
     <div>
-      <div class="project-meta">PROJECT 01 · TEAM PROJECT (4명) · 2026</div>
-      <h3 class="project-title">Flask Todo 서비스</h3>
-      <div class="stack-line">Python + Flask + Vercel</div>
-      <p class="project-desc">할 일을 기록하고 어디서나 확인하는 앱입니다.<br>Flask로 만든 할 일 관리 서비스를 Vercel에 배포했습니다.</p>
+      <div class="project-meta">PROJECT 01 · PERSONAL PROJECT (1인) · 2026</div>
+      <h3 class="project-title">ConnecJob<br>경험 기반 채용공고 추천</h3>
+      <div class="stack-line">Django + LangChain RAG + AWS EC2</div>
+      <p class="project-desc">경험을 적으면 맞는 채용공고를 근거와 함께 추천하고,<br>부족 역량 로드맵과 자기소개서 초안까지 만들어 주는 AI 서비스입니다.</p>
       <div class="figures">
-        <div class="fig"><div class="n">4<small>명</small></div><div class="l">팀 프로젝트<br>(1st 프로젝트)</div></div>
-        <div class="fig"><div class="n">4<small>종</small></div><div class="l">HTTP 메서드<br>GET·POST·PUT·DELETE</div></div>
-        <div class="fig"><div class="n">1<small>개</small></div><div class="l">실제 배포 서비스<br>(Vercel · QR 접속)</div></div>
+        <div class="fig"><div class="n">60,100<small>건</small></div><div class="l">15개 출처를 통합한<br>채용공고</div></div>
+        <div class="fig"><div class="n">94<small>%</small></div><div class="l">추천 적합률<br>(72% → 94%)</div></div>
+        <div class="fig"><div class="n">0.92</div><div class="l">신입 지원 가능 공고<br>재현율@10</div></div>
       </div>
       <ul class="point-box">
-        <li><b>로그인</b> 시 세션에 사용자 정보 저장 후 목록 화면으로 이동</li>
-        <li><b>할 일 추가</b>는 POST로 전송, 최신 항목이 위에 오도록 정렬</li>
-        <li><b>수정·삭제</b>는 PUT, DELETE 요청으로 처리</li>
-        <li>없는 번호로 접근하면 <b>404 안내 화면</b> 표시</li>
+        <li>공공 API·크롤링으로 <b>15개 출처 공고 수집·표준화</b>, 기술 사전 175개로 공고별 기술 태깅</li>
+        <li>임베딩 검색 → <b>규칙 기반 재순위</b> → LLM 재판정으로 추천 정확도 개선</li>
+        <li>TF-IDF·OpenAI·Upstage 임베딩을 <b>재현율@10으로 비교</b>해 text-embedding-3-large 채택</li>
+        <li>부족 기술 로드맵과 실제 기업 문항 기반 <b>자소서 초안</b>, 검수 LLM이 근거 없는 표현 제거</li>
       </ul>
       <dl class="info-box">
-        <dt>기간</dt><dd>2026.10</dd>
-        <dt>역할</dt><dd class="fill-me">본인 담당 파트 입력 (예: 라우팅·DB 연동)</dd>
-        <dt>스택</dt><dd>Python · Flask · Vercel</dd>
-        <!-- 링크 줄: class="fill-me"(점선) = 본인 주소로 바꿀 칸, 바꾼 뒤 fill-me 지우기 -->
-        <dt class="lk">GitHub</dt><dd><a class="fill-me" href="https://github.com/gildong-example/flask-todo" target="_blank" rel="noopener">github.com/gildong-example/flask-todo</a></dd>
-        <dt>배포</dt><dd><a href="https://web-flask-orcin.vercel.app" target="_blank" rel="noopener">web-flask-orcin.vercel.app</a><small>Vercel</small></dd>
-        <dt>발표</dt><dd><a href="assets/todo-slides.pdf" target="_blank" rel="noopener">todo-slides.pdf</a></dd>
+        <dt>기간</dt><dd>2026.10.26–2026.11.19 (4주)</dd>
+        <dt>역할</dt><dd>1인 전담 (기획·데이터·RAG·웹·배포)</dd>
+        <dt>스택</dt><dd>Python · Django · LangChain · Chroma · OpenAI · AWS EC2</dd>
+        <dt class="lk">GitHub</dt><dd><a href="https://github.com/congcongee/ConnecJob" target="_blank" rel="noopener">github.com/congcongee/ConnecJob</a></dd>
+        <dt>배포</dt><dd><a href="http://13.54.109.57:8000" target="_blank" rel="noopener">13.54.109.57:8000</a><small>AWS EC2</small></dd>
+        <dt>영상</dt><dd><a href="https://www.youtube.com/watch?v=rF4LaZISgIM" target="_blank" rel="noopener">youtube.com/watch?v=rF4LaZISgIM</a></dd>
       </dl>
-      <div class="insight fill-me">이 프로젝트에서 배운 점을 한 문장으로 입력</div>
+      <div class="insight">LLM 재판정에 "직무 종류가 같으면 적합"이라는 기준을 명시하자, 추천이 2개만 나오던 문제가 풀리고 적합률이 94%가 됐습니다.</div>
       <div class="btns">
-        <a class="btn primary" href="https://web-flask-orcin.vercel.app" target="_blank" rel="noopener">서비스 열기 →</a>
-        <a class="btn" href="https://github.com/gildong-example/flask-todo" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="assets/todo-slides.pdf" target="_blank" rel="noopener">발표 슬라이드</a>
+        <a class="btn primary" href="http://13.54.109.57:8000" target="_blank" rel="noopener">서비스 열기 →</a>
+        <a class="btn" href="https://github.com/congcongee/ConnecJob" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.youtube.com/watch?v=rF4LaZISgIM" target="_blank" rel="noopener">시연 영상</a>
       </div>
     </div>
 
     <div class="project-visual">
       <div class="browser-frame">
-        <div class="browser-bar"><i></i><i></i><i></i><span>web-flask-orcin.vercel.app</span></div>
+        <div class="browser-bar"><i></i><i></i><i></i><span>13.54.109.57:8000</span></div>
         <div class="screen">
-          <!-- muted + playsinline: 휴대폰에서도 자동 재생 -->
-          <div class="shot active"><video src="assets/todo-demo.mp4" poster="assets/todo-screen.png" autoplay muted loop playsinline controls aria-label="Flask Todo 시연 영상"></video></div>
-          <div class="shot"><img src="assets/todo-screen.png" alt="로그인 후 To-Do list 목록 화면"></div>
-          <div class="shot"><pre class="code"><span class="c"># app.py · 할 일 추가</span>
-@app.route('/create', methods=["POST"])
-<span class="k">def</span> create():
-    todo = Todo(content=request.form.get("content"))
-    create_todo(todo)   <span class="c"># DB에 저장</span>
-    <span class="k">return</span> redirect(url_for("todos", order="desc"))</pre></div>
-          <div class="shot"><div class="qr"><img src="assets/todo-qr.png" alt="서비스 접속 QR 코드"><span>휴대폰 카메라로 찍으면 서비스가 열립니다.</span></div></div>
+          <div class="shot active"><iframe src="https://www.youtube-nocookie.com/embed/rF4LaZISgIM" title="ConnecJob 시연 영상" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="shot"><img src="assets/cj-result.jpg" alt="추천 결과 화면: 추천 공고와 추천 이유, 부족 역량 로드맵"></div>
+          <div class="shot"><img src="assets/cj-home.jpg" alt="ConnecJob 홈 화면"></div>
+          <div class="shot"><img src="assets/cj-jobs.jpg" alt="공고 둘러보기 화면: 직무 필터와 공고 목록"></div>
         </div>
       </div>
-      <div class="tabs"><button class="tab active">시연 영상</button><button class="tab">실행 화면</button><button class="tab">핵심 코드</button><button class="tab">QR 접속</button></div>
+      <div class="tabs"><button class="tab active">시연 영상</button><button class="tab">추천 결과</button><button class="tab">홈</button><button class="tab">공고 둘러보기</button></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== PROJECT 02 ===================== -->
+<!-- ===================== PROJECT 02 : Project911 ===================== -->
 <section class="section" id="p2">
   <div class="section-inner project-layout">
     <div>
-      <div class="project-meta">PROJECT 02 · PERSONAL PROJECT · 2026</div>
-      <h3 class="project-title">고객상담 말투<br>LoRA 파인튜닝</h3>
-      <div class="stack-line">Hugging Face + PEFT(LoRA) + Colab T4</div>
-      <p class="project-desc">공개 상담 대화 데이터로 소형 한국어 모델을 튜닝해,<br>정중하고 짧은 상담 말투로 답하게 만들었습니다.</p>
+      <div class="project-meta">PROJECT 02 · TEAM PROJECT (4명) · 2026</div>
+      <h3 class="project-title">Project911<br>구급 수요 예측 · 병상 관제</h3>
+      <div class="stack-line">scikit-learn + Keras + Flask</div>
+      <p class="project-desc">서울 자치구별 구급 이송 수요를 예측하고,<br>실시간 응급실 가용병상과 한 화면에서 보는 웹 대시보드입니다.</p>
       <div class="figures">
-        <div class="fig"><div class="n">1,200<small>건</small></div><div class="l">정제한<br>질문·답변 쌍</div></div>
-        <div class="fig"><div class="n">0.6<small>%</small></div><div class="l">학습한 파라미터<br>(LoRA r=8)</div></div>
-        <div class="fig"><div class="n">4.1<small>/5</small></div><div class="l">말투 적절성<br>사람 평가 평균</div></div>
+        <div class="fig"><div class="n">116<small>만 건</small></div><div class="l">서울시 구급출동<br>건별 데이터</div></div>
+        <div class="fig"><div class="n">6<small>개</small></div><div class="l">회귀 모델 비교<br>(MAE·RMSE·R²)</div></div>
+        <div class="fig"><div class="n">25<small>개 구</small></div><div class="l">전체 자치구<br>병상 조회</div></div>
       </div>
       <ul class="point-box">
-        <li>중복·욕설·개인정보 포함 대화 <b>필터링</b></li>
-        <li>Instruction 포맷으로 <b>프롬프트 템플릿</b> 통일</li>
-        <li>튜닝 전후 30문항 <b>블라인드 비교</b> 평가</li>
-        <li>학습 손실과 검증 손실을 같이 보며 과적합 확인</li>
+        <li>날짜·25개 자치구를 공통 키로 통일해 <b>자치구×월·일 분석 데이터</b> 구성</li>
+        <li>예측 기간(1~6개월)·자치구 선택 조회와 <b>예측 추세 시각화 화면</b> 구현</li>
+        <li>학습된 모델(.pkl·.h5)을 <b>Flask에 연동</b>해 조건별 예측 결과 반환</li>
+        <li>병상 API가 비는 2개 구는 <b>인접 구 병상으로 대체 안내</b></li>
       </ul>
       <dl class="info-box">
-        <dt>기간</dt><dd>2026.10</dd>
-        <dt>역할</dt><dd>1인 데이터 정제·학습·평가</dd>
-        <dt>스택</dt><dd>PyTorch · Transformers · PEFT</dd>
-        <!-- 모델 프로젝트는 "배포" 대신 학습 노트북 + 모델 공개 주소(Hugging Face Hub) -->
-        <dt class="lk">GitHub</dt><dd><a class="fill-me" href="https://github.com/gildong-example/cs-tone-lora" target="_blank" rel="noopener">github.com/gildong-example/cs-tone-lora</a></dd>
-        <dt>노트북</dt><dd><a class="fill-me" href="https://github.com/gildong-example/cs-tone-lora/blob/main/lora_finetune.ipynb" target="_blank" rel="noopener">cs-tone-lora/lora_finetune.ipynb</a><small>Colab</small></dd>
-        <dt>모델</dt><dd><a class="fill-me" href="https://huggingface.co/gildong-example/cs-tone-lora" target="_blank" rel="noopener">huggingface.co/gildong-example/cs-tone-lora</a></dd>
+        <dt>기간</dt><dd>2026.09.23–2026.10.10 (3주)</dd>
+        <dt>역할</dt><dd>데이터 정제 · 타깃 정의 · 웹 화면 · 모델 연동 · 테스트</dd>
+        <dt>스택</dt><dd>Python · scikit-learn · Keras · Prophet · Flask · Chart.js</dd>
+        <dt class="lk">GitHub</dt><dd><a href="https://github.com/aibbai/Project_911" target="_blank" rel="noopener">github.com/aibbai/Project_911</a><small>팀 레포</small></dd>
       </dl>
-      <div class="insight">학습 데이터 300건을 덜어내자 오히려 말투가 더 일정해졌습니다.</div>
-      <div class="btns"><a class="btn primary" href="https://github.com/gildong-example/cs-tone-lora/blob/main/lora_finetune.ipynb" target="_blank" rel="noopener">학습 노트북 →</a><a class="btn" href="https://github.com/gildong-example/cs-tone-lora" target="_blank" rel="noopener">GitHub</a></div>
+      <div class="insight">API가 일부 지역을 비워도, 대체 데이터와 인접 지역 안내로 25개 구 전체를 조회하게 만들 수 있었습니다.</div>
+      <div class="btns"><a class="btn primary" href="https://github.com/aibbai/Project_911" target="_blank" rel="noopener">GitHub →</a></div>
     </div>
 
     <div class="project-visual">
       <div class="browser-frame">
-        <div class="browser-bar"><i></i><i></i><i></i><span>colab · lora_finetune.ipynb</span></div>
+        <div class="browser-bar"><i></i><i></i><i></i><span>SEOUL EMERGENCY HUB</span></div>
         <div class="screen">
-          <div class="shot active"><div class="mock">
-            <h6>LOSS · EPOCH 1–5</h6>
-            <!-- 값 범위 0.4~2.0 → 세로 10~170 -->
-            <svg viewBox="0 0 320 200" role="img" aria-label="학습 손실과 검증 손실 곡선">
-              <line x1="34" y1="10" x2="34" y2="170" stroke="#d5dde8"/><line x1="34" y1="170" x2="310" y2="170" stroke="#d5dde8"/>
-              <text x="4" y="14">2.0</text><text x="4" y="94">1.2</text><text x="4" y="173">0.4</text>
-              <text x="31" y="188">1</text><text x="100" y="188">2</text><text x="169" y="188">3</text><text x="238" y="188">4</text><text x="304" y="188">5</text>
-              <polyline fill="none" stroke="#2563eb" stroke-width="3" points="34,18 103,90 172,122 241,140 310,150"/>
-              <polyline fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4" points="34,30 103,98 172,124 241,128 310,126"/>
-              <text x="250" y="120" style="fill:#64748b">val</text><text x="262" y="162" style="fill:#2563eb">train</text>
-            </svg>
-          </div></div>
-          <div class="shot"><div class="mock">
-            <h6>BEFORE / AFTER</h6>
-            <div class="bubble q">배송이 너무 늦어요.</div>
-            <div class="bubble a"><b>튜닝 전</b> · 배송 지연은 여러 원인이 있습니다. 첫째, 물류센터의 처리량이…</div>
-            <div class="bubble a"><b>튜닝 후</b> · 불편을 드려 죄송합니다. 주문번호를 알려주시면 현재 위치를 바로 확인해 드릴게요.</div>
-          </div></div>
-          <div class="shot"><pre class="code"><span class="c"># LoRA 설정</span>
-lora_config = LoraConfig(
-    r=8,
-    lora_alpha=16,
-    target_modules=["q_proj", "v_proj"],
-    lora_dropout=0.05,
-    task_type="CAUSAL_LM",
-)
-<span class="c"># trainable: 0.6% of params</span></pre></div>
+          <div class="shot active"><img src="assets/p911-predict.jpg" alt="구급 이송 수요 예측 화면"></div>
+          <div class="shot"><img src="assets/p911-beds.jpg" alt="실시간 응급실 병상 관제 화면"></div>
+          <div class="shot"><img src="assets/p911-forecast.jpg" alt="자치구별 향후 6개월 예측 이송 건수 그래프"></div>
+          <div class="shot"><img src="assets/p911-home.jpg" alt="SEOUL EMERGENCY HUB 메인 화면"></div>
         </div>
       </div>
-      <div class="tabs"><button class="tab active">손실 곡선</button><button class="tab">전후 비교</button><button class="tab">설정</button></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PROJECT 03 ===================== -->
-<section class="section" id="p3">
-  <div class="section-inner project-layout">
-    <div>
-      <div class="project-meta">PROJECT 03 · TEAM PROJECT (2명) · 2026</div>
-      <h3 class="project-title">학교 급식<br>잔반량 예측</h3>
-      <div class="stack-line">Pandas + scikit-learn + Streamlit</div>
-      <p class="project-desc">메뉴·요일·날씨로 다음 날 잔반량을 예측해,<br>조리량을 미리 조정할 수 있게 했습니다.</p>
-      <div class="figures">
-        <div class="fig"><div class="n">480<small>일</small></div><div class="l">급식 기록<br>학습 데이터</div></div>
-        <div class="fig"><div class="n">11<small>%</small></div><div class="l">랜덤포레스트<br>MAPE</div></div>
-        <div class="fig"><div class="n">17<small>개</small></div><div class="l">만든 특성<br>(메뉴 분류 등)</div></div>
-      </div>
-      <ul class="point-box">
-        <li>메뉴명을 <b>국·주반찬·부반찬</b>으로 분류해 특성화</li>
-        <li>선형회귀·랜덤포레스트·XGBoost <b>교차검증 비교</b></li>
-        <li>특성 중요도로 잔반이 많은 메뉴 유형 정리</li>
-      </ul>
-      <dl class="info-box">
-        <dt>기간</dt><dd>2026.07</dd>
-        <dt>역할</dt><dd>전처리·모델 비교 담당</dd>
-        <dt>스택</dt><dd>Python · Streamlit</dd>
-        <!-- 팀 레포는 <small>로 본인 담당 표시 -->
-        <dt class="lk">GitHub</dt><dd><a class="fill-me" href="https://github.com/team-example/leftover-forecast" target="_blank" rel="noopener">github.com/team-example/leftover-forecast</a><small>팀 레포</small></dd>
-        <dt>배포</dt><dd><a class="fill-me" href="https://leftover-forecast.streamlit.app" target="_blank" rel="noopener">leftover-forecast.streamlit.app</a><small>Streamlit Cloud</small></dd>
-      </dl>
-      <div class="insight">예측 정확도보다 "언제 틀리는지"를 설명하는 쪽이 현장 설득에 더 중요했습니다.</div>
-      <div class="btns"><a class="btn primary" href="https://leftover-forecast.streamlit.app" target="_blank" rel="noopener">대시보드 보기 →</a><a class="btn" href="https://github.com/team-example/leftover-forecast" target="_blank" rel="noopener">GitHub</a></div>
-    </div>
-
-    <div class="project-visual">
-      <div class="browser-frame">
-        <div class="browser-bar"><i></i><i></i><i></i><span>leftover-forecast.streamlit.app</span></div>
-        <div class="screen">
-          <div class="shot active"><div class="mock">
-            <h6>FORECAST · 실제 vs 예측 (kg)</h6>
-            <!-- 값 범위 20~80kg → 세로 170~10 -->
-            <svg viewBox="0 0 320 200" role="img" aria-label="실제 잔반량과 예측값 비교 선 그래프">
-              <line x1="34" y1="10" x2="34" y2="170" stroke="#d5dde8"/><line x1="34" y1="170" x2="310" y2="170" stroke="#d5dde8"/>
-              <text x="8" y="14">80</text><text x="8" y="94">50</text><text x="8" y="173">20</text>
-              <text x="28" y="188">월</text><text x="97" y="188">화</text><text x="166" y="188">수</text><text x="235" y="188">목</text><text x="300" y="188">금</text>
-              <polyline fill="none" stroke="#94a3b8" stroke-width="2" points="34,98 103,62 172,130 241,74 310,118"/>
-              <polyline fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="6 4" points="34,104 103,72 172,122 241,84 310,110"/>
-            </svg>
-          </div></div>
-          <div class="shot"><div class="mock" style="justify-content:center; gap:18px">
-            <h6>MODEL · MAPE(%) 낮을수록 좋음</h6>
-            <div class="bar-row"><span>선형회귀</span><div class="bar" style="width:76%"></div><span class="v">19</span></div>
-            <div class="bar-row"><span>XGBoost</span><div class="bar" style="width:52%"></div><span class="v">13</span></div>
-            <div class="bar-row"><span>랜덤포레스트</span><div class="bar hl" style="width:44%"></div><span class="v">11</span></div>
-          </div></div>
-        </div>
-      </div>
-      <div class="tabs"><button class="tab active">예측 그래프</button><button class="tab">모델 비교</button></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 기타 프로젝트 ===================== -->
-<section class="section" id="more">
-  <div class="section-inner">
-    <div class="project-meta">MORE PROJECTS</div>
-    <h3 class="project-title">기타 프로젝트</h3>
-    <div class="stack-line">Flask · n8n 자동화 · 웹 프로젝트</div>
-    <div class="more-grid">
-      <div class="card">
-        <div class="th">이미지 준비 중</div>
-        <div class="bd"><div class="m">FLASK · SQLITE</div><h4>수업 질문 게시판</h4><p>로그인, 질문 등록, 답변 채택까지 되는 소규모 게시판입니다.</p>
-          <!-- 카드용 링크 목록: 주소를 텍스트로 노출 -->
-          <div class="card-links">
-            <a class="fill-me" href="https://github.com/gildong-example/qna-board" target="_blank" rel="noopener">github.com/gildong-example/qna-board</a>
-          </div>
-          <a class="btn" href="https://github.com/gildong-example/qna-board" target="_blank" rel="noopener">GitHub →</a></div>
-      </div>
-      <div class="card">
-        <div class="th">이미지 준비 중</div>
-        <div class="bd"><div class="m">N8N · SLACK</div><h4>채용공고 알림 봇</h4><p>매일 아침 AI 직무 신규 공고를 모아 슬랙으로 보내 줍니다.</p>
-          <div class="card-links">
-            <a class="fill-me" href="https://github.com/gildong-example/job-alert-bot" target="_blank" rel="noopener">github.com/gildong-example/job-alert-bot</a>
-          </div>
-          <a class="btn" href="https://github.com/gildong-example/job-alert-bot" target="_blank" rel="noopener">GitHub →</a></div>
-      </div>
-      <div class="card">
-        <div class="th">이미지 준비 중</div>
-        <div class="bd"><div class="m">HTML · CSS · JS</div><h4>포트폴리오 사이트</h4><p>지금 보고 있는 페이지입니다. GitHub Pages로 배포했습니다.</p>
-          <div class="card-links">
-            <a class="fill-me" href="https://github.com/gildong-example/portfolio" target="_blank" rel="noopener">github.com/gildong-example/portfolio</a>
-            <a class="fill-me" href="https://gildong-example.github.io/portfolio" target="_blank" rel="noopener">gildong-example.github.io/portfolio</a>
-          </div>
-          <a class="btn" href="https://github.com/gildong-example/portfolio" target="_blank" rel="noopener">GitHub →</a></div>
-      </div>
+      <div class="tabs"><button class="tab active">수요 예측</button><button class="tab">병상 관제</button><button class="tab">자치구별 예측</button><button class="tab">메인</button></div>
     </div>
   </div>
 </section>
 
 </main>
-<footer class="footer">© 2026 Hong Gil Dong Portfolio. All Rights Reserved.</footer>
+<footer class="footer">© 2026 Pak Chewon Portfolio. All Rights Reserved.</footer>
 
 <!-- 이미지 크게 보기 창 -->
 <div class="lb" id="lb" hidden><img alt=""></div>
